@@ -1,0 +1,11 @@
+compatibility_date = "2021-11-01"
+main = "dist/cloudflare-workers-bundle/index.js"
+name = "phiberber"
+usage_model = 'bundled'
+workers_dev = true
+
+[site]
+bucket = "./dist/client"
+
+[build]
+command = "npm run build:cfw"
