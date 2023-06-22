@@ -1,4 +1,4 @@
-# Vita
+# Vita 🐧
 
 Vita is a multi-deployable, performant project designed for development and production environments. It aims to provide an easy-to-work-with setup for building web applications.
 
