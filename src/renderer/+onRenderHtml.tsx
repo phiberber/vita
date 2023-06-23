@@ -6,6 +6,7 @@ import { PageContext } from './PageContext'
 
 async function onRenderHtml(pageContext: PageContext) {
     const { Page, pageProps } = pageContext
+
     const pageHtml = renderToString(
         <PageShell pageContext={pageContext}>
             <Page {...pageProps} />
@@ -14,9 +15,9 @@ async function onRenderHtml(pageContext: PageContext) {
 
     // See https://vite-plugin-ssr.com/head
     const { documentProps } = pageContext
-    const title = (documentProps && documentProps.title) || 'Vite SSR app'
+    const title = (documentProps?.title) || 'Vite SSR app'
     const desc =
-        (documentProps && documentProps.description) ||
+        (documentProps?.description) ||
         'App using Vite + vite-plugin-ssr'
 
     const documentHtml = escapeInject`<!DOCTYPE html>
